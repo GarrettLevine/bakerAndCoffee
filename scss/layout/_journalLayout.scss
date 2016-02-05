@@ -1,0 +1,114 @@
+.journalArea {
+		background: url(../assets/journalbg.png) no-repeat;
+		background-size: cover;
+		padding: 4rem 0;
+		@include mq(large) {
+			padding-bottom: 6rem;
+		}
+
+	&__wrapper {
+		@include wrapper-style;
+	}
+
+	&__header {
+		color: $link-color;
+	}
+
+	&__journalTileContainer {
+		@include mq(large){
+			padding-bottom: 6rem;
+		}
+	}
+}
+
+.journalTileContainer__journalTile {
+	float: left;
+	width: 100%;
+
+	position: relative;
+	border-radius: 2px;
+	transition: all .5s;
+
+	@include mq(large) {
+		float: left; 
+		width: 33.33%;
+	}
+
+	img {
+		width: 100%;
+		display: block;
+	}
+
+	&:nth-child(1n+4) {
+		display: none;
+
+		@include mq(large) {
+			display: block;
+		}
+	}
+
+	&:hover .journalTile__overlay {
+		display: block;
+	}
+}
+
+.journalArea__journalButton {
+	border: 2px solid $link-color;
+	background: transparent;
+
+	margin-left: 50%;
+	transform: translate(-50%, 0);
+	margin-top: 2rem;
+	padding: 0;
+	
+	a {
+		display: block;
+		padding: 1rem;
+		color: $link-color;
+		font-size: 1.4rem;
+
+		&:hover {
+			background: $link-color;
+			color: $white;
+		}
+	}
+}
+
+.journalTile {
+	&__overlay {
+		display: none;
+
+		position: absolute;
+		z-index: 20;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+
+		background: rgba( 255, 255, 255, 0.8);
+	}
+	&__date {
+		display: inline-block;
+
+		color: $white;
+		background: $link-color;
+
+		font-size: 1.3rem;
+		padding: 1rem;
+
+		position: absolute;
+		bottom: 75px;
+		right: 25px;
+
+	}
+	&__title {
+		font-size: 3.2rem;
+		color: $black;
+
+		position: absolute;
+		bottom: 0;
+		right: 25px;
+	}
+}
+
+

@@ -1,0 +1,87 @@
+.menuArea {
+	background: url(../assets/menubg.png) no-repeat;
+	background-size: cover;
+	padding: 6rem 0;
+
+	&__wrapper {
+		@include wrapper-style;
+	}
+
+	&__heading {
+		margin: 0 auto;
+
+		padding: 3.3rem;
+		width: 18rem;
+
+		background: url(../assets/menu.png) no-repeat;
+		background-size: cover;
+
+		color: $white;
+		text-align: center;
+	}
+
+	&__menuTextContainer {
+		padding: 2.6rem 1.6rem;
+
+		@include mq(large) {
+			float: left;
+			width: 50%;
+		}
+	}
+}
+
+.menuTextContainer {
+
+	&__header {
+		color: $link-color;
+		text-decoration: underline;
+		text-transform: capitalize;
+		margin-top: 2rem;
+		margin-bottom: 0;
+	}
+	&__menuGroup {
+		padding: 1.6rem  1.6rem;
+		margin: auto;
+		@include border-style;
+
+		&--desserts {
+			@include mq(large) {
+				height: 61.9rem;
+			}
+		}
+	}
+}
+
+.menuItem {
+	&__title {
+		text-transform: uppercase;
+		color: $white;
+
+		font-size: 1.6rem;
+		font-weight: 700;
+
+		float: left;
+	}
+
+	&__price {
+		float: right;
+		font-size: 1.6rem;
+
+		color: $white;
+	}
+
+	&__description {
+		clear: both;
+		color: $white;
+
+		opacity: .33;
+		width:  90%;
+
+		font-size: 1.4rem;
+	}
+}
+
+
+
+
+

@@ -1,0 +1,150 @@
+.reservationsArea {
+	background: url(../assets/reservationbg.png) no-repeat;
+	background-size: cover;
+
+	padding: 6rem 0;
+
+	&__wrapper {
+		@include wrapper-style;
+	}
+
+	&__heading {
+		color: $link-color;
+	}
+
+	&__reservationsText {
+		color: $black;
+		opacity: .87;
+		line-height: $line-height;
+		font-size: 1.6rem;
+		font-weight: 300;
+
+		p {
+			margin-top: 0;
+			margin-bottom: 5.5rem;
+		}
+
+		@include mq(large) {
+			float: left;
+			width: 30%;
+		}
+	}
+
+	&__reservationButton {
+		@include border-style;
+		background: transparent;
+		text-align: left;
+		font-size: 1.6rem;
+		position: relative;
+
+		width: 29rem;
+		margin: 3rem auto;
+		transition: transform 0.5s;
+
+		@include mq(large) {
+			width: 100%;
+		}
+
+		&:hover {
+			background-color: white;
+			transform: scale(1.05);
+		}
+
+		p {
+			margin: 0;
+			color: $black;
+		}
+
+		a {
+			display: block;
+			padding: 1em;
+			color: $black;
+			font-weight: bold;
+			float: right;
+			width: 70%;
+			position: relative;
+			&::after {
+				content: url(../assets/icons/phone.svg);
+				display: block;
+				@include size(3.5rem);
+				position: absolute;
+				left: -5rem;
+				bottom: 2.5rem;
+			}
+
+			
+		}
+	}
+	&__reservationsForm {
+		position: relative;
+
+		background: transparent;
+
+		border: 1px solid black;
+	}
+}
+
+.form__container {
+	border: 3px solid $black;
+	padding: 3px;
+
+	@include mq(large) {
+		float: left;
+		width: calc(70% - 1.6%);
+		margin-left: 1.6%;
+	}
+}
+
+
+.reservationsForm {
+	&__reservationsInput {
+		@include input-style;
+
+		@include mq(large) {
+			padding: 2.5rem;
+			float: left;
+			width: 50%;
+		}
+	}
+	&__reservationsTextArea {
+		@include size(100% 20rem);
+		padding: 1.6rem;
+		font-size: 1.6rem;
+		color: $black;
+		resize: none;
+
+		&:focus {
+			outline: none;
+			border: 1px solid $link-color;
+		}
+	}
+	&__reservationsInput--submit {
+		@include submit-button;
+	}
+}
+
+.label__date {
+	@include size(3rem);
+	position: absolute;
+	right: 1.3rem;
+	top: 1.3rem;
+	@include mq(large) {
+		top: 2rem;
+		right: 50%;
+		transform: translate(-50%, 0);
+	}
+}
+
+.label__time {
+	@include size(3rem);
+	position: absolute;
+	top: 7rem;
+	right: 1.3rem;
+	background: white;
+
+	@include mq(large){
+		top: 2rem;
+	}
+}
+
+

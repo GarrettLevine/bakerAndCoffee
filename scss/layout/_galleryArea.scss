@@ -1,0 +1,132 @@
+.galleryArea {
+	padding: 6rem 0;
+	background: url(../assets/gallerybg.jpg) no-repeat;
+	background-size: cover;
+	
+	&__wrapper {
+		@include wrapper-style;
+	}
+
+	&__header {
+		color: $link-color;
+	}
+
+	&__albumSelection {
+		border: 3px solid $black;
+		padding: 2px;
+
+		ul {
+			border: 1px solid $black;
+			margin: 0;
+			padding: 1rem;
+			background: $white;
+		}
+	}
+}
+
+.imageContainer__galleryImage {
+	img {
+		width: 100%;
+		display: block;
+	}
+	@include mq(large) {
+		width: 33.33%;
+		float: left;
+	}
+	&:nth-child(1n+4) {
+			display: none;
+
+		@include mq(large) {
+			display: block;
+		}
+	}
+}
+
+
+.albumList__albumItem {
+	float: left;
+	display: block;
+	width: 33.33%;
+	
+	text-align: center;
+
+	&:first-child,
+	&:nth-child(2) {
+		width: 50%;
+
+		@include mq(large) {
+			width: 100%;
+		}
+
+	}
+	@include mq(large) {
+		width: 100%;
+		text-align: right;
+		position: relative;
+		&::after {
+			content: "";
+			display: block;
+			@include size(0.8rem);
+			background: $black;
+			border-radius: 50%;
+			position: absolute;
+			right: 0;
+			top: 2rem;
+		}
+	}
+
+	a {
+		display: block;
+		color: $black;
+		padding: 1.6rem;
+		font-size: 1.4rem;
+
+		&:hover {
+			color: $link-color;
+		}
+	}
+}
+
+.albumList__albumItem--selected {
+	@extend .albumList__albumItem;
+	
+	a {
+		color: $link-color;	
+		@include mq(large) {
+			&::after {
+				content: "";
+				display: block;
+				@include size(0.8rem);
+				border: 2px solid $link-color;
+				background: white;
+				border-radius: 50%;
+				position: absolute;
+				right: -2px;
+				top: 1.9rem;
+				z-index: 2;
+			}
+		}
+	}
+}
+
+.galleryArea {
+	&__imageContainer {
+		padding: 4rem 0;
+		margin-top: 0;
+
+		@include mq(large) {
+			padding: 0;
+			float: left;
+			width: calc(80% - 1.6%);
+			margin-left: 1.6%;
+		}
+	}
+}
+
+.galleryArea__albumSelection {
+	@include mq(large) {
+		float: left;
+		width: calc(20% - 1.6%);
+		margin-right: 1.6%;
+	}
+}

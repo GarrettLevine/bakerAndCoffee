@@ -1,0 +1,78 @@
+.slideOutMenu {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background-color: $black;
+	display: none;
+	right: 0;
+	z-index: 100;
+
+
+	@include mq(large) {
+		width: 25%;
+	}
+}
+
+.nav {
+	padding: 0;
+
+	li {
+		padding: 0;
+		margin: 0;
+	}
+	a {
+		text-align: center;
+		color: $link-color;
+		padding: 2.5rem;
+		display: block;
+		font-size: 2.2rem;
+		border-bottom: 2px solid $link-color;
+		transition: all 0.5s;
+		&:hover {
+			background-color: $link-color;
+			color: $black;
+		}
+	}
+}
+.slideOutMenu {
+	&__closeButton{
+		width: 100%;
+		height: 75px;
+		font-size: 3rem;
+		padding: 2rem;
+		color: $white;
+		background: $black;
+		text-align: center;
+
+		&:hover {
+			background-color: $link-color;
+			color: $black;
+		}
+	}
+}
+
+.fullsiteWrapper{
+	position: fixed;
+	z-index: 1000;
+
+	display: none;
+
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, .5);
+}
+
+.fulloverlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	background: rgba(0, 0, 0, 0.7);
+}
+
+.nav__menuButton {
+	background: transparent;
+	outline: none;
+}

@@ -1,0 +1,156 @@
+//===============================
+// MEDIA QUERY MIXIN
+//===============================
+
+@mixin mq($break) {
+  @if $break == "small" {
+    @media (min-width: $brkpoint-sm) and (max-width: $brkpoint-md) {
+    @content;
+  } 
+ } @else if $break == "medium" {
+    @media (min-width: $brkpoint-md + 1) {
+    @content;
+    }
+  } 
+   @else if $break == "large" {
+    @media (min-width: $brkpoint-lg) {
+     @content;
+    }
+  }
+  @else if $break == "x-large" {
+    @media (min-width: $brkpoint-xlg) {
+      @content;
+    }
+  }
+   @else {
+    @error "Whoops! no value could be retried for '#{$break}'!";
+  }
+}
+
+//===============================
+// IMAGE MIXINS
+//===============================
+
+
+//image replacement
+@mixin img-replace($img, $w, $h, $disp: block) {
+  background-image: url('#{$path--rel}/#{$img}');
+  background-repeat: no-repeat;
+  width: $w;
+  height: $h;
+  display: $disp;
+  @content;
+}
+
+//background mixin'
+
+@mixin gradient-background-img($imageName, $gradient) {
+  background: $gradient,
+            url(../assets/rooms/#{$imageName}.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+//blur image
+@mixin blur-filter($x) {
+  -webkit-filter: blur($x);
+  -moz-filter: blur($x);
+  -o-filter: blur($x);
+  -ms-filter: blur($x);
+  filter: blur($x);
+}
+
+//===============================
+// BUTTONS
+//===============================
+
+@mixin themed-button($height, $width, $background: $primary-color, $font: $white) {
+  @extend %button-styles;
+  background: $background;
+  color: $font;
+
+  height: $height;
+  width: $width;
+
+  &:hover {
+    @extend %box-shadow-hover;
+    background-color: $tertiary-color;
+  }
+
+  &:active {
+    @extend %tb-box-shadow;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin submit-button {
+    width: 100%;
+    padding: 3rem;
+    font-size: 1.6rem;
+    text-align: center;
+    color: $black;
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing;
+    background: url(../assets/seal.png) no-repeat,
+                           white;
+    background-size: contain;
+    background-position: 1.5rem;
+    border: none;
+}
+
+//===============================
+//  BORDER STYLES
+//===============================
+@mixin border-style {
+    border: 3px solid $color--outter-border;
+    position: relative;
+
+     &::before {
+        content: "";
+        position: absolute;
+        border: 1.5px solid $color--inner-border;
+        top: 1.5px;
+        bottom: 1.5px;
+        left: 1.5px;
+        right: 1.5px;
+        
+      }
+}
+
+//===============================
+//  WRAPPER STYLES
+//===============================
+@mixin wrapper-style {
+      max-width: $max-width--tablet;
+
+      margin: 0 auto;
+      padding: 0 3.5rem;
+
+      @include mq(large) {
+            max-width: $max-width--desktop;
+      }
+}
+
+//===============================
+//  INPUT STYLES
+//===============================
+@mixin input-style {
+  width: 100%;
+    background: white;
+    font-size: 1.6rem;
+    padding: 1.6rem;
+    @include placeholder {
+      color: $black;
+    }
+
+    &:focus {
+      outline: none;
+      border: 1px solid $link-color;
+    }
+}
+
+
+

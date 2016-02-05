@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+ <html>
+ 	<head>
+ 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+ 		<title>Baker and Coffee - Home | baked goods and fresh coffee.</title>
+
+ 		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
+
+	 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+ 		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+ 		<link rel="stylesheet" href="css/main.css" type="text/css">
+
+		
+
+ 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+ 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+ 	</head>
+
+ 	<body>
+ 		
+
+ 		<header class="header">
+ 		<div class="header__navContainer  clearfix">
+				<button class="nav__menuButton fa fa-bars"></button>
+				<nav class="slideOutMenu">
+					<div id="closeButton" class="slideOutMenu__closeButton">&larr;</div>
+					<ul class="nav">
+						<li class="slideOutMenu__listMenu"><a href="#menu">Home</a></li>
+						<li class="slideOutMenu__listMenu"><a href="#about">About</a></li>
+						<li class="slideOutMenu__listMenu"><a href="#gallery">Gallery</a></li>
+						<li class="slideOutMenu__listMenu"><a href="#journal">Journal</a></li>
+						<li class="slideOutMenu__listMenu"><a href="#reservations">Reservations</a></li>
+						<li class="nav__item"><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+			</div> <!-- end of nav__container -->
+			<section id="home" class="mainSection">
+				<div class="mainSection__heroImage">
+					<div class="mainSection__wrapper">
+						<div class="heroImage__heroTextContainer">
+								<div class="heroTextContainer__imageContainer">
+									<img class="heroTextContainer__logo" src="./assets/logo.png" alt="logo image">
+									<img class="heroTextContainer__textLogo" src="./assets/bakerycoffee.png" alt="bakery and coffe text image">
+								</div>
+								<p class="heroTextContainer__subHeading">Pastries <span class="subHeading__asterisk">*</span> Cakes <span class="subHeading__asterisk">*</span> Coffee</p>
+						</div> <!-- end of heroTextContainer -->
+						<div class="mainSection__heroHoursContainer">
+							<address class="heroHoursContainer__address">
+								<p>Lorem Street 9. </p>
+								<p>Berlin</p>
+							</address>
+							<p class="heroHoursContainer__hours">Weekdays <time>07:00 - 19:30</time></p>
+							<p class="heroHoursContainer__hours">Weekends <time>09:00 - 21:30</time></p>
+						</div>
+				</div> <!-- end of heroImage -->
+				</div>
+				
+				<div class="mainSection__foodContainer">
+					<div class="mainSection__wrapper clearfix">
+							<div class="foodContainer__foodItem foodContainer__foodItem--dessert">
+									<img class="foodItem__image" src="./assets/icons/svg/dessert.svg" alt="a hand drawn image of a cupcake.">
+									<h3 class="foodItem__heading">Dessert</h3>
+									<p class="foodItem__subHeading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dolores cupiditate, fugit consequuntur obcaecati eligendi!</p>
+							</div>
+							<div class="foodContainer__foodItem foodContainer__foodItem--pastry">
+									<img class="foodItem__image" src="/assets/icons/svg/pastry.svg" alt="a hand drawn image of a croissant.">
+									<h3 class="foodItem__heading">Pastry</h3>
+									<p class="foodItem__subHeading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet temporibus, repellendus nostrum enim fugiat recusandae!</p>
+							</div>
+							<div class="foodContainer__foodItem foodContainer__foodItem--coffee">
+									<img class="foodItem__image" src="/assets/icons/svg/coffee.svg" alt="a hand drawn image of a cup of coffee.">
+									<h3 class="foodItem__heading">Coffee</h3>
+									<p class="foodItem__subHeading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero voluptates, molestiae porro, illo dolorum ut?</p>
+							</div>
+					</div>
+				</div>  <!-- end of foodContainer  -->
+				</div> 
+			</section> <!-- end of mainSection --> 
+		</header>
+
+	 		<!-- ************************************************************************
+														MENU AREA
+			*************************************************************************-->
+
+			<section id="menu" class="menuArea">
+				<div class="menuArea__wrapper clearfix">
+					<div class="menuArea__headerContainer">
+						<h2 class="menuArea__heading">Menu</h2>
+					</div> <!-- end of menu__headerContainer -->
+					<div class="menuArea__menuTextContainer">
+							
+							<ul class="menuTextContainer__menuGroup menuTextContainer__menuGroup--desserts">
+								<h3  class="menuTextContainer__header">deserts</h3>
+								<li class="menuGroup__menuItem clearfix">
+									<p class="menuItem__title">Cupcakes</p>
+									<p class="menuItem__price">$2.99</p>
+									<p class="menuItem__description">Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+								</li>
+								<li class="menuGroup__menuItem clearfix">
+									<p class="menuItem__title">Cakes</p>
+									<p class="menuItem__price">$3.99</p>
+									<p class="menuItem__description">Curabitur blandit tempus porttitor.</p>
+								</li>
+								<li class="menuGroup__menuItem clearfix">
+									<p class="menuItem__title">Scones</p>
+									<p class="menuItem__price">$2.99</p>
+									<p class="menuItem__description">Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+								</li>
+								<li class="menuGroup__menuItem clearfix">
+									<p class="menuItem__title">Muffins</p>
+									<p class="menuItem__price">$1.99</p>
+									<p class="menuItem__description">Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+								</li>
+								<li class="menuGroup__menuItem clearfix">
+									<p class="menuItem__title">Buns</p>
+									<p class="menuItem__price">$1.99</p>
+									<p class="menuItem__description">Curabitur blandit tempus porttitor.</p>
+								</li>
+							</ul>
+					</div>
+					<div class="menuArea__menuTextContainer">
+							<ul class="menuTextContainer__menuGroup">
+								<h3 class="menuTextContainer__header">Pastry</h3>
+								<li class="menuGroup__menuItem clearfix">
+									<p class="menuItem__title">Waffle/GA</p>
+									<p class="menuItem__price">$2.99</p>
+									<p class="menuItem__description">Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+								</li>
+								<li class="menuGroup__menuItem clearfix">
+									<p class="menuItem__title">Macarons</p>
+									<p class="menuItem__price">$3.99</p>
+									<p class="menuItem__description">Ornare egestas aenean quam fusce.</p>
+								</li>
+								<li class="menuGroup__menuItem clearfix">
+									<p class="menuItem__title">Croissants</p>
+									<p class="menuItem__price">$1.99</p>
+									<p class="menuItem__description">Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+								</li>
+
+							<h3 class="menuTextContainer__header">Coffee</h3>
+								<li class="menuGroup__menuItem clearfix">
+									<p class="menuItem__title">Espresso</p>
+									<p class="menuItem__price">#1.99</p>
+									<p class="menuItem__description">Lorem ipsum dolor.</p>
+								</li>
+								<li class="menuGroup__menuItem clearfix">
+									<p class="menuItem__title">Latte</p>
+									<p class="menuItem__price">$2.99</p>
+									<p class="menuItem__description">Lorem ipsum dolor sit.</p>
+								</li>
+								<li class="menuGroup__menuItem clearfix">
+									<p class="menuItem__title">Capuccino</p>
+									<p class="menuItem__price">$2.99</p>
+									<p class="menuItem__description">Lorem ipsum.</p>
+								</li>
+					</div>
+				</div> <!-- end of menu__wrapper -->
+			</section> <!-- end of of menuArea -->
+
+	 		<!-- ************************************************************************
+															ABOUT AREA
+			*************************************************************************-->
+			
+			<section id="about" class="aboutArea">
+				<div class="aboutArea__wrapper clearfix">
+					<div class="aboutArea__container">
+						<h2 class="aboutArea__heading">About</h2>
+						<p class="aboutArea__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod nam quos quia doloremque, voluptatum itaque ab commodi eos tenetur consectetur labore dolore id nesciunt dolorum dolores sequi nihil amet. Quia.</p>
+						<p class="aboutArea__text">Minus ratione soluta, accusamus eos. Eius veritatis magni officia esse necessitatibus eveniet voluptatum tempora adipisci ut sequi quibusdam, facilis praesentium ullam voluptate vel sapiente nam molestias repellendus iste reprehenderit hic.</p>	
+						<img class="aboutArea__signature" src="./assets/signature.png" alt="C. Baker's signature">
+					</div>
+				</div> <!-- end of about__Wrapper -->
+			</section> <!--end of aboutArea -->
+
+ 		<!-- ************************************************************************
+													GALLERY AREA
+		*************************************************************************-->
+
+			<section id="gallery" class="galleryArea">
+				<div class="galleryArea__wrapper clearfix">
+					<h2 class="galleryArea__header">Gallery</h2>
+					<div class="galleryArea__albumSelection">
+						<ul class="albumSelection__albumList clearfix">
+							<li class=" albumList__albumItem albumList__albumItem--selected"><a href="#">All Albums</a></li>
+							<li class="albumList__albumItem"><a href="#">Bakery</a></li>
+							<li class="albumList__albumItem"><a href="#">Pastry</a></li>
+							<li class="albumList__albumItem"><a href="#">Desserts</a></li>
+							<li class="albumList__albumItem"><a href="#">Coffee</a></li>
+						</ul>
+					</div> 
+					<div class="galleryArea__imageContainer clearfix">
+						<div class="imageContainer__galleryImage"><img class="galleryImage" src="./assets/images/placeholder1.jpg" alt=""></div>
+						<div class="imageContainer__galleryImage"><img class="galleryImage" src="./assets/images/placeholder2.jpg" alt=""></div>
+						<div class="imageContainer__galleryImage"><img class="galleryImage" src="./assets/images/placeholder3.jpg" alt=""></div>
+						<div class="imageContainer__galleryImage"><img class="galleryImage" src="./assets/images/placeholder1.jpg" alt=""></div>
+						<div class="imageContainer__galleryImage"><img class="galleryImage" src="./assets/images/placeholder2.jpg" alt=""></div>
+						<div class="imageContainer__galleryImage"><img class="galleryImage" src="./assets/images/placeholder3.jpg" alt=""></div>
+						<div class="imageContainer__galleryImage"><img class="galleryImage" src="./assets/images/placeholder1.jpg" alt=""></div>
+						<div class="imageContainer__galleryImage"><img class="galleryImage" src="./assets/images/placeholder2.jpg" alt=""></div>
+						<div class="imageContainer__galleryImage"><img class="galleryImage" src="./assets/images/placeholder3.jpg" alt=""></div>
+					</div> <!-- end of imageContainer -->
+				</div> <!-- end of wrapper-->
+			</section> <!-- end of gallery area -->
+
+	 		<!-- ************************************************************************
+											JOURNAL AREA
+			*************************************************************************-->
+
+			<section id="journal" class="journalArea">
+				<div class="journalArea__wrapper">
+					<h2 class="journalArea__header">Journal</h2>
+					<div class="journalArea__journalTileContainer clearfix">
+						<div class="journalTileContainer__journalTile">
+							<img class="journalTile__image" src="./assets/images/placeholder1.jpg">
+
+							<div class="journalTile__overlay">
+								<p class="journalTile__date">09 December 2014</p>
+								<p class="journalTile__title">Blog Title Here</p>
+							</div>
+	
+						</div>
+						<div class="journalTileContainer__journalTile">
+							<img class="journalTile__image" src="./assets/images/placeholder2.jpg">
+							<div class="journalTile__overlay">
+								<p class="journalTile__date">09 December 2014</p>
+								<p class="journalTile__title">Blog Title Here</p>
+							</div>
+	
+						</div>
+						<div class="journalTileContainer__journalTile">
+							<img class="journalTile__image" src="./assets/images/placeholder3.jpg">
+							<div class="journalTile__overlay">
+								<p class="journalTile__date">09 December 2014</p>
+								<p class="journalTile__title">Blog Title Here</p>
+							</div>
+	
+						</div>
+						<div class="journalTileContainer__journalTile">
+							<img class="journalTile__image" src="./assets/images/placeholder1.jpg">
+							<div class="journalTile__overlay">
+								<p class="journalTile__date">09 December 2014</p>
+								<p class="journalTile__title">Blog Title Here</p>
+							</div>
+	
+						</div>
+						<div class="journalTileContainer__journalTile">
+							<img class="journalTile__image" src="./assets/images/placeholder2.jpg">
+							<div class="journalTile__overlay">
+								<p class="journalTile__date">09 December 2014</p>
+								<p class="journalTile__title">Blog Title Here</p>
+							</div>
+	
+						</div>
+						<div class="journalTileContainer__journalTile">
+							<img class="journalTile__image" src="./assets/images/placeholder3.jpg">
+							<div class="journalTile__overlay">
+								<p class="journalTile__date">09 December 2014</p>
+								<p class="journalTile__title">Blog Title Here</p>
+							</div>
+	
+						</div>
+						<div class="journalTileContainer__journalTile">
+							<img class="journalTile__image" src="./assets/images/placeholder1.jpg">
+							<div class="journalTile__overlay">
+								<p class="journalTile__date">09 December 2014</p>
+								<p class="journalTile__title">Blog Title Here</p>
+							</div>
+	
+						</div>
+						<div class="journalTileContainer__journalTile">
+							<img class="journalTile__image" src="./assets/images/placeholder1.jpg">
+							<div class="journalTile__overlay">
+								<p class="journalTile__date">09 December 2014</p>
+								<p class="journalTile__title">Blog Title Here</p>
+							</div>
+	
+						</div>
+						<div class="journalTileContainer__journalTile">
+							<img class="journalTile__image" src="./assets/images/placeholder1.jpg">
+							<div class="journalTile__overlay">
+								<p class="journalTile__date">09 December 2014</p>
+								<p class="journalTile__title">Blog Title Here</p>
+							</div>
+	
+						</div>
+					</div> <!-- end of journalTile__container -->
+
+					<button class="journalArea__journalButton">
+						<a href="#">View Journal</a>
+					</button> 
+
+				</div> <!-- end of journal__wrapper -->
+			</section> <!-- end of journalArea -->
+
+	 		<!-- ************************************************************************
+											RESERVATIONS AREA
+			*************************************************************************-->
+
+			<section id="reservations" class="reservationsArea">
+				<div class="reservationsArea__wrapper clearfix">
+					<h3 class="reservationsArea__heading">Reservations</h3>
+					<div class="reservationsArea__reservationsText">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam sed sapiente quos nulla vero, aliquid illo sunt illum at pariatur?</p>
+						<p>Ipsum magni, iusto repudiandae fugiat. At ratione, impedit id ipsum aliquid voluptate illum eveniet possimus. Reprehenderit nemo reiciendis fugiat officiis.</p>
+
+						<button class="reservationsArea__reservationButton clearfix">
+
+							<a href="" class="reservationsButton__phoneNumber"><p class="reservationButton__text">Phone Reservations</p>0-999-999-9999</a>
+						</button>
+					</div> 
+				
+				<div class="form__container">
+					<form method="POST" class="reservationsArea__reservationsForm clearfix">
+						<label class="label__date" for="datepicker"><img src="./assets/icons/calendar.svg"></label>
+						<input class="reservationsForm__reservationsInput reservationsForm__reservationsInput--date" type="text" name="date" placeholder="Date" id="datepicker">
+
+						<label class="label__time" for="timepicker"><img src="./assets/icons/clock.svg"></label>
+						<input class="reservationsForm__reservationsInput reservationsForm__reservationsInput--time" type="text" name="time" id="timepicker" placeholder="Time">
+						<input class="reservationsForm__reservationsInput reservationsForm__reservationsInput--guests" type="text" name="" placeholder="No. Of Persons">
+						<input class="reservationsForm__reservationsInput reservationsForm__reservationsInput--name" type="text" placeholder="Name">
+						<input class="reservationsForm__reservationsInput reservationsForm__reservationsInput--email" type="text" placeholder="E-mail">
+						<input class="reservationsForm__reservationsInput reservationsForm__reservationsInput--phone" type="phone" placeholder="Phone">
+						<textarea class="reservationsForm__reservationsTextArea" name="message" placeholder="Message"></textarea>
+						<input class="reservationsForm__reservationsInput--submit" type="submit" value="Make Reservations">
+					</form>
+				</div>
+				</div> <!-- end of reservationsArea__wrapper -->
+			</section> <!-- end of reservationsArea -->
+
+				<!-- ************************************************************************
+											CONTACT AREA
+			*************************************************************************-->
+
+			<section id="contact" class="contactArea">
+				<div class="contactArea__wrapper clearfix">
+					<h2 class="contactArea__heading">Contact</h2>
+					<div class="contactArea__contactInfoContainer">
+							<ul class="contactInfoContainer__contactInfo">
+								<li class="contactInfoContainer__contactItem contactInfoContainer__contactItem--address"><a href="">Lorem Street 09, Berlin</a></li>
+								<li class="contactInfoContainer__contactItem contactInfoContainer__contactItem--phone"><a href="">0 (999) 999-9999</a></li>
+								<li class="contactInfoContainer__contactItem contactInfoContainer__contactItem--email"><a href="">loremipsum@email.com</a></li>
+							</ul>
+							<ul class="contactInfoContainer__mediaButtonContainer clearfix">
+								<li class="mediaButtonContainer__mediaButton"><a href=""><i class="mediaButton fa fa-twitter-square"></i></a></li>
+								<li class="mediaButtonContainer__mediaButton"><a href=""><i class="mediaButton fa fa-facebook-square"></i></a></li>
+								<li class="mediaButtonContainer__mediaButton"><a href=""><i class="mediaButton fa fa-google-plus-square"></i></a></li>
+								<li class="mediaButtonContainer__mediaButton"><a href=""><i class="mediaButton fa fa-youtube-square"></i></a></li>
+								<li class="mediaButtonContainer__mediaButton"><a href=""><i class="mediaButton fa fa-instagram"></i></a></li>
+								<li class="mediaButtonContainer__mediaButton"><a href=""><i class="mediaButton fa fa-yelp"></i></a></li>
+							</ul>
+							<div class="contactInfoContainer__mapContainer">
+									<iframe class="mapContainer__googleMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.7338043162435!2d-79.42801618450225!3d43.65370637912122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b345805dab989%3A0x85e008867674670!2s928+College+St%2C+Toronto%2C+ON+M6H+1A4!5e0!3m2!1sen!2sca!4v1454544709270"></iframe>
+							</div>
+						</div> <!-- end of contactInfo__container -->
+
+						<div class="form__container">
+							<form action="" class="contactArea__contactForm">
+									<input type="text" class="contactForm__input contactForm__input--name" placeholder="Name">
+									<input type="text" class="contactForm__input contactForm__input--email" placeholder="Email">
+									<input type="text" class="contactForm__input contactForm__input--phone" placeholder="Phone">
+									<textarea name="" id="" cols="30" rows="10" class="contactForm__textArea" placeholder="Message"></textarea>
+									<input type="submit" class="contactForm__submitButton" value="Send Message" >
+							</form>
+						</div>
+					</div> <!-- end of contactInfo__wrapper -->
+			</section> <!-- end of ContactArea -->
+ 		<footer class="footer">
+ 			<div class="footer__wrapper clearfix">
+ 				<section class="footer__socialMediaContainer">
+ 					<div class="socialMediaContainer__twitterContainer">
+ 					<h4 class="twitterContainer__heading">Latest tweet</h4>
+	 					<p class="twitterContainer__tweet">Lorem ipsum dolor sit amet, check it out! <a href="">http://consectetur.twitterlink.com </a><a href="">#blessed</a> <a href="">#soblessed</a> adipisicing lorem dolar. <span class="tweet__date">09 December 2014</span><span class="tweet__user">@craftedPixels</span></p>
+ 					</div> <!-- end of twitterContainer -->
+					<div class="socialMediaContainer__iconContainer">
+						<h5 class="iconContainer__heading">Social Media</h5>
+						<ul class="footer__mediaButtonContainer clearfix">
+								<li class="mediaButtonContainer__mediaButton"><a href=""><i class="mediaButton fa fa-twitter-square"></i></a></li>
+								<li class="mediaButtonContainer__mediaButton"><a href=""><i class="mediaButton fa fa-facebook-square"></i></a></li>
+								<li class="mediaButtonContainer__mediaButton"><a href=""><i class="mediaButton fa fa-google-plus-square"></i></a></li>
+								<li class="mediaButtonContainer__mediaButton"><a href=""><i class="mediaButton fa fa-youtube-square"></i></a></li>
+								<li class="mediaButtonContainer__mediaButton"><a href=""><i class="mediaButton fa fa-instagram"></i></a></li>
+								<li class="mediaButtonContainer__mediaButton"><a href=""><i class="mediaButton fa fa-yelp"></i></a></li>
+							</ul>
+					</div> <!-- end of iconContainer -->
+ 				</section> <!-- end of social mediaContainer -->
+
+ 				<section class="footer__footerMenu">
+ 					<h4 class="footerMenu__heading">Menu</h4>
+ 					<nav class="footerMenu__footerNav">
+ 						<ul>
+ 							<li class="footerNav__navItem"><a href="#home">Home</a></li>
+ 							<li class="footerNav__navItem"><a href="#products">Products</a></li>
+ 							<li class="footerNav__navItem"><a href="#menu">Menu</a></li>
+ 							<li class="footerNav__navItem"><a href="#about">About</a></li>
+ 							<li class="footerNav__navItem"><a href="#reservations">Reservations</a></li>
+ 							<li class="footerNav__navItem"><a href="#contact">Contact</a></li>
+ 						</ul>
+ 					</nav>
+ 				</section> <!-- end of footerMenu -->
+
+ 				<section class="footer__hoursJournal">
+ 					<div class="hoursJournal__hoursContainer">
+ 						<h4 class="hoursContainer__heading">Open Hours</h4>
+ 						<p class="hoursContainer__hours">weekdays <time>07:00-19:30</time></p>
+ 						<p class="hoursContainer__hours">weekends <time>09:00-21:30</time></p>
+ 					</div>
+ 					<div class="hoursJournal__journalContainer">
+ 							<h4 class="journalContainer__heading">Latest Journal Posts</h4>
+
+ 							<ul>
+ 								<li><a href="" class="journalContainer__journalTitle">New Delicious Treats in our Menu</a></li>
+ 								<li><a href="" class="journalContainer__journalTitle">New Locations Opening Soon</a></li>
+ 								<li><a href="" class="journalContainer__journalTitle">Baker and Coffee turns 1!</a></li>
+ 							</ul>
+ 					</div>
+ 				</section> <!-- end of hoursJournal -->
+
+ 			</div> <!-- end of footer__wrapper -->
+ 		</footer>
+ 		</div>
+ 		<script src="js/main.js"></script>
+ 		<script src="js/menu/menu.js"></script>
+ 		<script src="js/menu/gallery.js"></script>
+ 	</body>
+ </html>

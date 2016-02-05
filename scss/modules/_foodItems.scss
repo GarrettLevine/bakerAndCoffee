@@ -1,0 +1,46 @@
+.mainSection {
+	&__foodContainer {
+		background: $primary-color;
+		padding: 3rem 0;
+	}
+
+	&__wrapper {
+		@include wrapper-style;
+		padding-top: 15rem;
+	}
+}
+
+.foodContainer {
+	&__foodItem {
+		text-align: center;
+		color: $black;
+
+		padding: 2.6rem 0;
+
+		h3{
+			margin: 0;
+		}
+
+		@include mq(large) {
+			float: left;
+			width: calc(33.33% - 1.6%);
+			margin-left: 1.6%;
+		}
+	}
+}
+
+.foodItem {
+	&__heading {
+		letter-spacing: $letter-spacing;
+	}
+	&__subHeading {
+		font-size: 1.8rem;
+		line-height: $line-height;
+
+		opacity: 0.8;
+	}
+
+	&__image {
+		@include size(24.7rem 14.7rem);
+	}
+}

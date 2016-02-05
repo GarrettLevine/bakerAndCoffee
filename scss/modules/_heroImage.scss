@@ -1,0 +1,91 @@
+.mainSection {
+	&__wrapper {
+		@include wrapper-style;
+
+		position: relative;
+	}
+
+	&__heroImage {
+		@include background-image(url(../assets/images/hero.jpg));
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		padding-bottom: 20rem;
+	}
+
+	&__heroHoursContainer {
+		@include background-image(url(../assets/circle.png));
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		width: 300px;
+		height: 310px;
+
+		position: absolute;
+		left: 50%;
+		bottom: -36.5rem;
+		z-index: 50;
+
+		transform: translate(-50%, 0);
+
+		text-align: center;
+		color: $white;
+		font-size: 1.8rem;
+	}
+}
+
+.heroTextContainer {
+	&__imageContainer {
+		width: 100%;
+
+		padding-top: 12.5rem;
+		margin: auto;
+
+		text-align: center;
+	}
+
+	&__logo {
+		margin: auto;
+		display: block;
+	}
+
+	&__textLogo {
+		margin: auto;
+		max-width: 100%;
+		padding: 1.6rem;
+	}
+
+	&__subHeading {
+		color: $white;
+		font-size: 1.6rem;
+
+		text-transform: uppercase;
+		text-align: center;
+
+		@include mq(large) {
+			font-size: 1.8rem;
+		}
+	}
+}
+
+.subHeading__asterisk {
+	font-size: 1.2rem;
+}
+
+.heroHoursContainer {
+	&__address {
+		margin-top: 8.5rem;
+		margin-bottom: 2rem;
+
+		p  {
+			margin: 0;
+		}
+	}
+}
+
+
+
+
+
+
+

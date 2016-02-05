@@ -1,0 +1,95 @@
+// ==========================================================================
+// Global Config
+// ==========================================================================
+
+//==================================
+// FONT PRESETS
+//==================================
+$font-url--googleSans   : 'https://fonts.googleapis.com/css?family=Raleway';
+$font-url--googleSerif  : 'https://fonts.googleapis.com/css?family=Rufina:400,700';
+
+
+@import url($font-url--googleSans);
+@import url($font-url--googleSerif);
+
+//Font Weight Presets
+$font-weight--thin            : 100;
+$font-weight--light      	    : 300;
+$font-weight--medium     : 400;
+$font-weight--bold      	    : 700;
+$font-weight--ultra-bold   :  900;
+
+//Font Stacks
+$font-family--primary: 'Rufina', sans-serif;
+$font-family--secondary: 'Raleway', serif;
+
+//==================================
+// DESCRIPTIVE BASE COLORS
+//==================================
+$firebush		: #E59444;
+$paynes-grey  : #404047;
+$alabaster		: #FCFCF9;
+$shark 		:  #373639;
+
+
+
+//==================================
+// COLOR USAGE
+//==================================
+$white       : #fdffff;
+$black       : $paynes-grey;
+// $grey        :  $paynes-grey; 
+
+$primary-color 	: $alabaster;
+$link-color			: $firebush;
+
+
+$color--outter-border	: $paynes-grey;
+$color--inner-border	:  $shark;
+
+
+// Text
+$letter-spacing		: 0.3rem;
+$line-height	 	: 1.6;
+
+$h1-font-size	 : 4.2rem;
+$h2-font-size    : 3.2rem;
+$h3-font-size    : 2.8rem;
+$h4-font-size    : 2.0rem;
+$h5-font-size    : 1.6rem;
+$h6-font-size    : 1.2rem;
+
+$heading-list: (
+	h1: $h1-font-size,
+	h2: $h2-font-size,
+	h3: $h3-font-size,
+	h4: $h4-font-size,
+	h5: $h5-font-size,
+	h6: $h6-font-size
+);
+
+//max-width
+$max-width--tablet   	: 600px;
+$max-width--desktop	: 1170px;
+
+
+// Border radius
+
+$br--default    : .4em;
+$br--round      : 50%;
+
+// Transitions
+
+$trns-duration  : .3s;
+
+// Path to Assets
+
+$path--rel      : "../assets";
+
+// Breakpoints
+
+$brkpoint-sm    : 1px;
+$brkpoint-md    : 650px;
+$brkpoint-lg    	 :  940px;
+$brkpoint-xlg     : 1400px;
+

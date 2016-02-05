@@ -1,0 +1,127 @@
+.footer {
+	background: url(../assets/footerbg.png) no-repeat;
+	background-size: cover;
+	padding: 3rem 0 5rem;
+
+	@include mq(large) {
+		padding-bottom: 10rem;
+	}
+
+	color: white;
+	&__wrapper {
+		@include wrapper-style;
+	}
+
+	&__socialMediaContainer {
+		padding: 1.5rem 0;
+		@include mq(large) {
+			float: left;
+			width: 35%;
+		}
+	}
+
+	&__footerMenu {
+		@include mq(medium) {
+			float: left;
+			width: 50%;
+		}
+		@include mq(large) {
+			width: calc(25% - 5%);
+			margin-left: 5%;
+		}
+	}
+
+	&__hoursJournal {
+		@include mq(medium) {
+			float: left;
+			width: 50%;
+		}
+
+		 @include mq(large) {
+			width: calc(30% - 5%);
+			margin-left: 5%;
+		}
+	}
+
+	&__mediaButtonContainer {
+		padding: 0;
+	}
+
+	.mediaButton {
+		color: white;
+	}
+
+	h4, h5 {
+		text-transform: uppercase;
+	}
+}
+
+.socialMediaContainer {
+	&__twitterContainer {
+		a {
+			color: $link-color;
+		}
+
+		p {
+			line-height: $line-height;
+			font-size: 1.2rem;
+		}
+
+		.tweet__date {
+			font-weight: 700
+		}
+	}
+}
+
+.footerMenu__footerNav {
+	ul {
+		padding: 0;
+	}
+
+	a {
+		color: $link-color;
+		font-size: 1.6rem;
+		line-height: $line-height;
+
+		&:hover {
+			color:  $white;
+		}
+	}
+}
+
+.hoursJournal {
+	&__hoursContainer {
+		p {
+			font-size: 1.4rem;
+		}
+
+		h4 {
+			margin-bottom: 0;
+		}
+	}
+
+	&__journalContainer {
+		ul {
+			padding: 0;
+		}
+		h4 {
+			margin-top: 4rem;
+			margin-bottom: 0;
+		}
+
+		a {
+			font-size: 1.4rem;
+			color: $link-color;
+			display: inline-block;
+			padding: 0.4rem 0;
+
+			&:hover {
+				color: white;
+			}
+		}
+	}
+}
+
+
+
+
