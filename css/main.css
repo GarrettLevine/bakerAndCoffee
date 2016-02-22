@@ -380,7 +380,7 @@ body {
 a {
   text-decoration: none; }
   a:visited {
-    color: #fdffff; }
+    color: #404047; }
 
 li {
   list-style-type: none; }
@@ -521,6 +521,47 @@ h6 {
   .hoursJournal__journalContainer a:hover {
     color: white; }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    display: block; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    display: none; } }
+@keyframes coffeeFadeIn {
+  0% {
+    opacity: 0; }
+  50% {
+    transform: translate(30px, 0px); }
+  75% {
+    transform: translate(30px, 0px); }
+  100% {
+    transform: translate(30px, 0px);
+    opacity: 1; } }
+.coffeeMug__container {
+  vertical-align: center;
+  text-align: center;
+  padding-top: 30rem; }
+
+#coffeeHeat {
+  transform: translate(30px, 40px);
+  stroke: #cB624A;
+  animation: coffeeFadeIn 5s; }
+
+.openingOverlay {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  background: #E59444; }
+
 .menuArea {
   background: url(../assets/menubg.png) no-repeat;
   background-size: cover;
@@ -598,6 +639,9 @@ h6 {
     @media (min-width: 940px) {
       .galleryArea__wrapper {
         max-width: 1170px; } }
+    @media (min-width: 940px) {
+      .galleryArea__wrapper {
+        min-height: 68rem; } }
   .galleryArea__header {
     color: #E59444; }
   .galleryArea__albumSelection {
@@ -609,29 +653,30 @@ h6 {
       padding: 1rem;
       background: #fdffff; }
 
-.imageContainer__galleryImage img {
-  width: 100%;
-  display: block; }
-@media (min-width: 940px) {
-  .imageContainer__galleryImage {
-    width: 33.33%;
-    float: left; } }
-.imageContainer__galleryImage:nth-child(1n+4) {
-  display: none; }
+.imageContainer__galleryImage {
+  height: 25rem;
+  transition: all 0.5s; }
   @media (min-width: 940px) {
-    .imageContainer__galleryImage:nth-child(1n+4) {
-      display: block; } }
+    .imageContainer__galleryImage {
+      height: 19.1rem; } }
+  .imageContainer__galleryImage img {
+    width: 100%;
+    height: 100%;
+    display: block; }
+  @media (min-width: 940px) {
+    .imageContainer__galleryImage {
+      width: 33.33%;
+      float: left; } }
+  .imageContainer__galleryImage:nth-child(1n+4) {
+    display: none; }
+    @media (min-width: 940px) {
+      .imageContainer__galleryImage:nth-child(1n+4) {
+        display: block; } }
 
 .albumList__albumItem, .albumList__albumItem--selected {
   float: left;
-  display: block;
-  width: 33.33%;
+  width: 25%;
   text-align: center; }
-  .albumList__albumItem:first-child, .albumList__albumItem--selected:first-child, .albumList__albumItem:nth-child(2), .albumList__albumItem--selected:nth-child(2) {
-    width: 50%; }
-    @media (min-width: 940px) {
-      .albumList__albumItem:first-child, .albumList__albumItem--selected:first-child, .albumList__albumItem:nth-child(2), .albumList__albumItem--selected:nth-child(2) {
-        width: 100%; } }
   @media (min-width: 940px) {
     .albumList__albumItem, .albumList__albumItem--selected {
       width: 100%;
@@ -686,6 +731,8 @@ h6 {
     float: left;
     width: calc(20% - 1.6%);
     margin-right: 1.6%; } }
+.galleryArea__albumSelection h5 {
+  text-align: center; }
 
 .journalArea {
   background: url(../assets/journalbg.png) no-repeat;
@@ -800,9 +847,9 @@ h6 {
     position: relative;
     background: transparent;
     text-align: left;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     position: relative;
-    width: 29rem;
+    width: 25rem;
     margin: 3rem auto;
     transition: transform 0.5s; }
     .reservationsArea__reservationButton::before {
@@ -815,7 +862,8 @@ h6 {
       right: 1.5px; }
     @media (min-width: 940px) {
       .reservationsArea__reservationButton {
-        width: 100%; } }
+        width: 100%;
+        font-size: 1.6rem; } }
     .reservationsArea__reservationButton:hover {
       background-color: white;
       transform: scale(1.05); }
@@ -856,7 +904,8 @@ h6 {
   width: 100%;
   background: white;
   font-size: 1.6rem;
-  padding: 1.6rem; }
+  padding: 1.6rem;
+  border: 1px solid grey; }
   .reservationsForm__reservationsInput::-webkit-input-placeholder {
     color: #404047; }
   .reservationsForm__reservationsInput::-moz-placeholder {
@@ -878,8 +927,15 @@ h6 {
   width: 100%;
   padding: 1.6rem;
   font-size: 1.6rem;
-  color: #404047;
   resize: none; }
+  .reservationsForm__reservationsTextArea::-webkit-input-placeholder {
+    color: #404047; }
+  .reservationsForm__reservationsTextArea::-moz-placeholder {
+    color: #404047; }
+  .reservationsForm__reservationsTextArea:-moz-placeholder {
+    color: #404047; }
+  .reservationsForm__reservationsTextArea:-ms-input-placeholder {
+    color: #404047; }
   .reservationsForm__reservationsTextArea:focus {
     outline: none;
     border: 1px solid #E59444; }
@@ -980,7 +1036,8 @@ h6 {
   width: 100%;
   background: white;
   font-size: 1.6rem;
-  padding: 1.6rem; }
+  padding: 1.6rem;
+  border: 1px solid grey; }
   .contactForm__input::-webkit-input-placeholder {
     color: #404047; }
   .contactForm__input::-moz-placeholder {
@@ -997,6 +1054,7 @@ h6 {
   background: white;
   font-size: 1.6rem;
   padding: 1.6rem;
+  border: 1px solid grey;
   resize: none; }
   .contactForm__textArea::-webkit-input-placeholder {
     color: #404047; }
@@ -1117,7 +1175,7 @@ h6 {
   background-image: url(../assets/images/hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 20rem; }
+  padding-bottom: 22rem; }
 .mainSection__heroHoursContainer {
   background-image: url(../assets/circle.png);
   background-image: url(../assets/circle.png);
@@ -1223,5 +1281,165 @@ h6 {
     .aboutArea__container {
       float: left;
       width: 50%; } }
+
+.cssload-thecube {
+  width: 47px;
+  height: 47px;
+  margin: 0 auto;
+  margin-top: 31px;
+  position: relative;
+  transform: rotateZ(45deg);
+  -o-transform: rotateZ(45deg);
+  -ms-transform: rotateZ(45deg);
+  -webkit-transform: rotateZ(45deg);
+  -moz-transform: rotateZ(45deg); }
+
+.cssload-thecube .cssload-cube {
+  position: relative;
+  transform: rotateZ(45deg);
+  -o-transform: rotateZ(45deg);
+  -ms-transform: rotateZ(45deg);
+  -webkit-transform: rotateZ(45deg);
+  -moz-transform: rotateZ(45deg); }
+
+.cssload-thecube .cssload-cube {
+  float: left;
+  width: 50%;
+  height: 50%;
+  position: relative;
+  transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1); }
+
+.cssload-thecube .cssload-cube:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(229, 148, 68, 0.94);
+  animation: cssload-fold-thecube 2.76s infinite linear both;
+  -o-animation: cssload-fold-thecube 2.76s infinite linear both;
+  -ms-animation: cssload-fold-thecube 2.76s infinite linear both;
+  -webkit-animation: cssload-fold-thecube 2.76s infinite linear both;
+  -moz-animation: cssload-fold-thecube 2.76s infinite linear both;
+  transform-origin: 100% 100%;
+  -o-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  -webkit-transform-origin: 100% 100%;
+  -moz-transform-origin: 100% 100%; }
+
+.cssload-thecube .cssload-c2 {
+  transform: scale(1.1) rotateZ(90deg);
+  -o-transform: scale(1.1) rotateZ(90deg);
+  -ms-transform: scale(1.1) rotateZ(90deg);
+  -webkit-transform: scale(1.1) rotateZ(90deg);
+  -moz-transform: scale(1.1) rotateZ(90deg); }
+
+.cssload-thecube .cssload-c3 {
+  transform: scale(1.1) rotateZ(180deg);
+  -o-transform: scale(1.1) rotateZ(180deg);
+  -ms-transform: scale(1.1) rotateZ(180deg);
+  -webkit-transform: scale(1.1) rotateZ(180deg);
+  -moz-transform: scale(1.1) rotateZ(180deg); }
+
+.cssload-thecube .cssload-c4 {
+  transform: scale(1.1) rotateZ(270deg);
+  -o-transform: scale(1.1) rotateZ(270deg);
+  -ms-transform: scale(1.1) rotateZ(270deg);
+  -webkit-transform: scale(1.1) rotateZ(270deg);
+  -moz-transform: scale(1.1) rotateZ(270deg); }
+
+.cssload-thecube .cssload-c2:before {
+  animation-delay: 0.35s;
+  -o-animation-delay: 0.35s;
+  -ms-animation-delay: 0.35s;
+  -webkit-animation-delay: 0.35s;
+  -moz-animation-delay: 0.35s; }
+
+.cssload-thecube .cssload-c3:before {
+  animation-delay: 0.69s;
+  -o-animation-delay: 0.69s;
+  -ms-animation-delay: 0.69s;
+  -webkit-animation-delay: 0.69s;
+  -moz-animation-delay: 0.69s; }
+
+.cssload-thecube .cssload-c4:before {
+  animation-delay: 1.04s;
+  -o-animation-delay: 1.04s;
+  -ms-animation-delay: 1.04s;
+  -webkit-animation-delay: 1.04s;
+  -moz-animation-delay: 1.04s; }
+
+.galleryArea__loadingOverlay {
+  background: rgba(64, 64, 71, 0.9);
+  padding: 22rem 8rem; }
+  @media (min-width: 940px) {
+    .galleryArea__loadingOverlay {
+      padding: 22rem; } }
+
+@keyframes cssload-fold-thecube {
+  0%, 10% {
+    transform: perspective(87px) rotateX(-180deg);
+    opacity: 0; }
+  25%,
+				75% {
+    transform: perspective(87px) rotateX(0deg);
+    opacity: 1; }
+  90%,
+				100% {
+    transform: perspective(87px) rotateY(180deg);
+    opacity: 0; } }
+@-o-keyframes cssload-fold-thecube {
+  0%, 10% {
+    -o-transform: perspective(87px) rotateX(-180deg);
+    opacity: 0; }
+  25%,
+				75% {
+    -o-transform: perspective(87px) rotateX(0deg);
+    opacity: 1; }
+  90%,
+				100% {
+    -o-transform: perspective(87px) rotateY(180deg);
+    opacity: 0; } }
+@-ms-keyframes cssload-fold-thecube {
+  0%, 10% {
+    -ms-transform: perspective(87px) rotateX(-180deg);
+    opacity: 0; }
+  25%,
+				75% {
+    -ms-transform: perspective(87px) rotateX(0deg);
+    opacity: 1; }
+  90%,
+				100% {
+    -ms-transform: perspective(87px) rotateY(180deg);
+    opacity: 0; } }
+@-webkit-keyframes cssload-fold-thecube {
+  0%, 10% {
+    -webkit-transform: perspective(87px) rotateX(-180deg);
+    opacity: 0; }
+  25%,
+				75% {
+    -webkit-transform: perspective(87px) rotateX(0deg);
+    opacity: 1; }
+  90%,
+				100% {
+    -webkit-transform: perspective(87px) rotateY(180deg);
+    opacity: 0; } }
+@-moz-keyframes cssload-fold-thecube {
+  0%, 10% {
+    -moz-transform: perspective(87px) rotateX(-180deg);
+    opacity: 0; }
+  25%,
+				75% {
+    -moz-transform: perspective(87px) rotateX(0deg);
+    opacity: 1; }
+  90%,
+				100% {
+    -moz-transform: perspective(87px) rotateY(180deg);
+    opacity: 0; } }
 
 /*# sourceMappingURL=main.css.map */

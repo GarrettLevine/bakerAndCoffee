@@ -2,6 +2,8 @@
 $(document).ready(function() {
 	$("#datepicker").datepicker();
 
+	$(".openingOverlay").delay(1800).fadeOut("slow");
+
 	$(function() {
 	  $('a[href*="#"]:not([href="#"])').click(function() {
 	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
